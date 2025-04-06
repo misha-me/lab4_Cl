@@ -1,0 +1,16 @@
+name: On Push Date
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  print-datetime:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Print current date/time
+        run: echo %DATE% %TIME%

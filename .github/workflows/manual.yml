@@ -1,0 +1,15 @@
+name: Manual OS Info
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-windows-os:
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Display Windows version
+        run: ver
